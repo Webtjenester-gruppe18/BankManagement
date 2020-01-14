@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class BankController {
     @RequestMapping("/bankmanager")
     public String index() {
-        return "ToDo: Implement me";
+        return "ToDo: Implement Bankmanager";
     }
 }
