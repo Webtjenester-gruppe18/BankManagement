@@ -8,13 +8,13 @@ pipeline {
     }
      stage('Build') {
           steps {
-            sh 'docker build --tag bankmanager:latest . '
+            sh 'docker build --tag bankmanagerimage:latest . '
           }
         }
      stage('Deploy') {
           steps {
-            sh '''docker stop bankmanager:latest || true && docker rm bankmanager:latest || true;
-            docker run -d -p 7575:8080 --name bankmanager:latest bankmanager:latest
+            sh '''docker stop bankmanager || true && docker rm bankmanager || true;
+            docker run -d -p 7575:8080 --name bankmanager bankmanagerimage:latest
             '''
           }
      }
