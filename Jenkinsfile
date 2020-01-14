@@ -14,7 +14,7 @@ pipeline {
      stage('Deploy') {
           steps {
             sh '''docker stop bankmanager:latest || true && docker rm bankmanager:latest || true;
-            docker run -d -p 7575:8080 bankmanager:latest
+            docker run -d -p 7575:8080 --name bankmanager:latest bankmanager:latest
             '''
           }
      }
