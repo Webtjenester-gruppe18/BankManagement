@@ -1,10 +1,13 @@
-package dtu.ws18.bankmanagement;
+package dtu.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/bank")
 public class BankController {
-    @RequestMapping("/bankmanager")
+    @GetMapping("/bankmanager")
     public String index() {
         return "ToDo: Implement Testing";
     }
